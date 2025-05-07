@@ -10,9 +10,9 @@ class WebhookController extends Controller
 {
     public function handle(Request $request)
     {
-        $client = (new AmoCrmAuthService())->loadToken();
         $data = $request->all();
         Log::info(print_r($data, true));
+        $client = (new AmoCrmAuthService())->loadToken();
         return response()->noContent();
     }
 }
