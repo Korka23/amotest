@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::group(['as' =>'auth', 'prefix' => 'auth'], function () {
+Route::group(['as' =>'auth.', 'prefix' => 'auth'], function () {
    Route::get('redirect', [AuthController::class, 'redirect']);
    Route::get('callback', [AuthController::class, 'callback']);
 });
